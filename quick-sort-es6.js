@@ -3,7 +3,7 @@
 function qSort(arr) { 
   let allElemsIsEquil = arr.every( (item, i) => item === arr[0] );
 	
-  if (allElemsIsEquil) {
+  if (allElemsIsEquil) { //and arr.length <= 1
     return arr;
   } else if (arr.length == 2) {
 		
@@ -12,7 +12,7 @@ function qSort(arr) {
     return arr;
 		
   } else {	
-    let randIndex = Math.random() * (arr.length - 1) | 0, 
+    let randIndex = Math.random() * (arr.length - 1) | 0,
         pivot = arr[randIndex],
         lesserThanPivot = arr.filter( (item) => item < pivot ),
         greaterThanPivot = arr.filter( (item) => item >= pivot );
